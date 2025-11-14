@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+
+  <!-- Подключаем AR.js с поддержкой маркеров -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <style> body { margin: 0; overflow: hidden; } </style>
+</head>
+<body>
+  <a-scene embedded arjs>
+    <!-- Маркер Hiro -->
+    <a-marker preset="hiro">
+      <!-- Твоя 3D-модель -->
+      <a-entity gltf-model="url(town.glb)" position="0 0 6" scale="1 1 1" rotation="0 180 0"></a-entity>
+    </a-marker>
+    <!-- Камера -->
+    <a-camera position="0 1.6 0" wasd-controls="enabled: false">
+        <a-cursor></a-cursor>
+    </a-camera>
+
+    
+  
+</body>
+</html>
